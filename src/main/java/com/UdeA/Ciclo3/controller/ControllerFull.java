@@ -21,6 +21,13 @@ public class ControllerFull {
         model.addAttribute("emplist",listaEmpresas);
         return "verEmpresas"; //Llamamos al HTML
     }
+  @GetMapping("/AgregarEmpresa")
+
+    public String nuevaEmpresa(Model model){
+        Empresa emp= new Empresa();
+        model.addAttribute("emp",emp);
+        return "agregarEmpresa";
+  }
 
 
 }
